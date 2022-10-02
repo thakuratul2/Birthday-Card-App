@@ -19,14 +19,11 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.button);
         edit = findViewById(R.id.editTextTextPersonName);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String name = edit.getEditableText().toString();
-                Toast.makeText(MainActivity.this,
-                        "Button is "+name,
-                        Toast.LENGTH_LONG).show();
-            }
+        btn.setOnClickListener(view -> {
+            String name = edit.getEditableText().toString();
+            Toast.makeText(MainActivity.this,
+                    "Enter name is "+name,
+                    Toast.LENGTH_LONG).show();
         });
     }
 }
